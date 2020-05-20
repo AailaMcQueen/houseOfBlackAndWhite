@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Quicksand";
   }
   
   body{
@@ -18,12 +19,16 @@
     display: flex;
     justify-content: center;
     padding: 10px;
+    font-weight: bold;
   }
   
   .row{
     background-color: white;
     display: flex;
+    border: none;
     flex-direction: row;
+    border-radius: 3vh;
+    border-bottom: none;
   }
   
   .prof{
@@ -32,8 +37,9 @@
   }
   
   .card{
-    width: 400px;
+    width: 500px;
     justify-content: center;
+    box-sizing: border-box;
   }
   
   .btn{
@@ -42,8 +48,31 @@
     background-color: teal;
     border: none;
     color: white;
+    border-radius: 3vh;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.7;
+  }
+
+  hr{
+      margin: 1vh 0;
+  }
+
+  .name{
+      color: teal;
+      font-weight: 900;
+  }
+
+  .username{
+      color: blue;
+  }
+
+  .data{
+    padding: 20px;
+  }
+  .btn:hover{
+      cursor: pointer;
+      opacity: 1;
+      transition: ease-in 300ms;
   }
   
   .image{
