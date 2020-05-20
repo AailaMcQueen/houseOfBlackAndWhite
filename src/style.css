@@ -78,12 +78,36 @@
   }
   
   .image{
-    height: 100px;
-    width: 100px;
     padding: 20px;
   }
   
   #image{
     border-radius: 50%;
+  }
+
+  @media screen and (max-width:600px){
+      .card{
+          width: 80%;
+      }
+      .heading{
+          font-size: smaller;
+      }
+      .row{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+    }
+  }
+
+  @media screen and (max-width:370px){
+    .card{
+        font-size: smaller;
+    }
+    .heading{
+        font-size: x-small;
+    }
   }
   
