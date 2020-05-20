@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background: #d4d4d4;
+  }
+  
+  .container{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .heading{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .row{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .prof{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card{
+    width: 400px;
+    justify-content: center;
+  }
+  
+  .btn{
+    flex-grow: 100%;
+    padding: 10px;
+    background-color: teal;
+    border: none;
+    color: white;
+    width: 100%;
+    opacity: 0.8;
+  }
+  
+  .image{
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+  }
+  
+  #image{
+    border-radius: 50%;
+  }
+  
