@@ -5,8 +5,10 @@ var username = document.querySelector(".username");
 var email = document.querySelector(".email");
 var city = document.querySelector(".city");
 var url = "https://randomuser.me/api/";
+var rowAnimate = document.getElementsByClassName("row")[0];
 
 button.addEventListener("click", function(){
+
     fetch(url)
     .then(function(request){
         if(!request.ok){
@@ -16,13 +18,22 @@ button.addEventListener("click", function(){
     })
     .then(function(response){
         var data = response.results[0];
-        nameProf.innerHTML = data.name.title + " " + data.name.first + " " + data.name.last;
-        city.innerHTML = data.location.city;
-        username.innerHTML = data.login.username;
-        email.innerHTML = data.email;
-        image.src = data.picture.large;
+        rowAnimate.style.webkitAnimationPlayState = "running";
+        
+        setTimeout(function(){
+            nameProf.innerHTML = data.name.title + " " + data.name.first + " " + data.name.last;
+            city.innerHTML = data.location.city;
+            username.innerHTML = data.login.username;
+            email.innerHTML = data.email;
+            image.src = data.picture.large;
+        }, 900);
+        setTimeout(function(){
+            rowAnimate.style.webkitAnimationPlayState = "paused";
+        }, 2000);
+        
     })
     .catch(function(error){
         alert(error);
-    })
+    });
 })
+
