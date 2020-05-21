@@ -18,18 +18,20 @@ button.addEventListener("click", function(){
     })
     .then(function(response){
         var data = response.results[0];
-        rowAnimate.style.webkitAnimationPlayState = "running";
-        
+        //rowAnimate.style.webkitAnimationPlayState = "running";
+        rowAnimate.classList.add("myAnimate");
         setTimeout(function(){
             nameProf.innerHTML = data.name.title + " " + data.name.first + " " + data.name.last;
             city.innerHTML = data.location.city;
             username.innerHTML = data.login.username;
             email.innerHTML = data.email;
             image.src = data.picture.large;
-        }, 900);
+        }, 400);
         setTimeout(function(){
-            rowAnimate.style.webkitAnimationPlayState = "paused";
-        }, 2000);
+            //rowAnimate.style.webkitAnimationPlayState = "paused";
+            rowAnimate.classList.remove("myAnimate");
+            rowAnimate.style.opacity = 1;
+        }, 900);
         
     })
     .catch(function(error){
