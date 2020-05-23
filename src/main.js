@@ -6,6 +6,16 @@ var email = document.querySelector(".email");
 var city = document.querySelector(".city");
 var url = "https://randomuser.me/api/";
 var rowAnimate = document.getElementsByClassName("row")[0];
+// var x = document.getElementById("myAudio"); 
+
+// function playAudio() { 
+//   x.play(); 
+// } 
+
+// function pauseAudio() { 
+//   x.pause(); 
+// }
+
 
 fetch(url)
 .then(function(request){

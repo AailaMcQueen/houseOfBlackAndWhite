@@ -7,7 +7,12 @@
   }
   
   body{
-    background: #d4d4d4;
+    background-image: url('./image/backCover2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: inherit;
+    background-position: center;
+    height: 100vh;
   }
   
   .container{
@@ -23,6 +28,7 @@
     justify-content: center;
     padding: 10px;
     font-weight: bold;
+    color: white;
   }
   
   .row{
@@ -80,6 +86,7 @@
   }
   .btn:hover{
       cursor: pointer;
+      opacity: 1;
       font-size: larger;
       transition: ease-in-out;
       transition-duration: 0.5s;
