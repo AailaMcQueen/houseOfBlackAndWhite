@@ -19,6 +19,11 @@ function pauseAudio() {
 // window.onload = function() {
 //     var context = new AudioContext();
 //   }
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    playAudio();
+    document.removeEventListener('click', musicPlay);
+}
 
 
 fetch(url)
