@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "Quicksand";
+    font-family: 'Cinzel', serif;
   }
   
   body{
+
+  }
+  
+  .container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     background-image: url('./image/backCover2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: inherit;
     background-position: center;
-    height: 100vh;
-  }
-  
-  .container{
-    padding-top: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
   }
   
   .heading{
