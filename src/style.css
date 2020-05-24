@@ -7,17 +7,38 @@
     font-family: 'Cinzel', serif;
   }
   
-  body{
+  /* .openingCover{
+    height: 100vh;
+    background-image: url('./image/openingCover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: inherit;
+    background-position: center;
+  } */
 
+
+
+  .introductory{
+    height: 100vh;
+    background-image: url('./image/backCover5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: inherit;
+    background-position: center;
+  }
+
+  .sigil{
+    height: 100px;
+    width: 100px;
   }
   
   .container{
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    background-image: url('./image/backCover2.jpg');
+    background-image: url('./image/backCover3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: inherit;
