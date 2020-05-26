@@ -40,8 +40,21 @@
   }
 
   .cards{
-    width: 100%;
+    width: 90%;
     margin-top: 220px;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card hr{
+    width: 80%;
   }
 
   .expand{
@@ -157,16 +170,6 @@
       box-shadow: none;
       top: 3px;
   }
-
-  @keyframes butHover{
-    0%{
-        opacity: 0.7;
-    }
-    100%{
-        opacity: 1;
-        font-size: 1.5em;
-    }
-  }
   
   .image{
     padding: 20px;
@@ -209,6 +212,13 @@
     .sigil img{
       height: 8vh;
       width: 8vh;
+    }
+
+    .cards{
+      flex-direction: column;
+      margin-top: 16vh;
+      flex-basis: 80%;
+      justify-content: space-around;
     }
   }
 
