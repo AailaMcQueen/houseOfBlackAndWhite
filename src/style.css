@@ -7,24 +7,41 @@
     font-family: 'Cinzel', serif;
   }
   
-  /* .openingCover{
+
+  .openingCover{
     height: 100vh;
     background-image: url('./image/openingCover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: inherit;
     background-position: center;
-  } */
+  }
 
 
 
   .introductory{
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: absolute;
     background-image: url('./image/backCover5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: inherit;
     background-position: center;
+    background-blend-mode: lighten;
+  }
+
+  .nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-basis: 100%;
+    position: fixed;
+  }
+
+  .cards{
+    width: 100%;
+    margin-top: 220px;
   }
 
   .expand{
@@ -43,9 +60,10 @@
     transition-duration: 0.5s;
   }
 
-  .sigil{
-    height: 100px;
-    width: 100px;
+  .sigil img{
+    height: 20vh;
+    width: 20vh;
+    padding-top: 10px;
   }
 
   .extraInfo{
@@ -54,7 +72,7 @@
   
   .container{
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     position: relative;
@@ -172,6 +190,25 @@
     .image{
         display: flex;
         justify-content: center;
+    }
+    .nav{
+      flex-direction: row;
+      justify-content: space-between;
+      flex-basis: 20%;
+      height: 14vh;
+      background-color: white;
+    }
+    .houseName{
+      padding-top: 10px;
+      text-align: right;
+      color: white;
+      background-color:black;
+      flex-grow: 0.8;
+      padding-right: 8px;
+    }
+    .sigil img{
+      height: 8vh;
+      width: 8vh;
     }
   }
 
