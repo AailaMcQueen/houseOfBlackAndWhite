@@ -96,6 +96,24 @@ button.addEventListener("click", function(){
 })
 
 enterButton.addEventListener("click", function(){
-    $(".openingCover").fadeOut(1500);
-    $(".introductory").fadeIn(3000);
+    $(".openingCover").fadeTo(1500, 0, function(){
+        $(".openingCover").css("display", "none");
+        $(".introductory").fadeTo(1000, 1);
+    });  
 })
+
+var rotate = 0;
+
+$('.expand').click(function() {
+    $(".extraInfo").slideToggle(1200);
+    $('.fa-arrow-circle-down').animate(
+      { deg: rotate + 180 },
+      {
+        duration: 1200,
+        step: function(now) {
+          rotate = now;
+          $(this).css({ transform: 'rotate(' + now + 'deg)' });
+        }
+      }
+    );
+  });
