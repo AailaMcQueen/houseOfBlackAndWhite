@@ -7,9 +7,38 @@
     font-family: 'Cinzel', serif;
   }
   
+  .go{
+    width: 60px;
+    height: inherit;
+    color: black;
+    font-size: 40px;
+  }
+
+  .tik{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    margin-top: 40vh;
+    background-color: black;
+    color: white;
+  }
+
+  .tik:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    opacity: 1;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+  }
+
+  .tik h4{
+    padding: 10px;
+  }
 
   .openingCover{
-    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
     background-image: url('./image/openingCover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +49,7 @@
 
 
   .introductory{
+    display: none;
     min-height: 100%;
     width: 100%;
     position: absolute;

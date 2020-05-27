@@ -10,6 +10,7 @@ var city = document.querySelector(".city");
 var url = "https://randomuser.me/api/";
 var rowAnimate = document.getElementsByClassName("row")[0];
 var x = document.getElementById("myAudio"); 
+var enterButton = document.querySelector(".tik");
 
 function playAudio() { 
   x.play(); 
@@ -94,3 +95,6 @@ button.addEventListener("click", function(){
     });
 })
 
+enterButton.addEventListener("click", function(){
+    
+})
