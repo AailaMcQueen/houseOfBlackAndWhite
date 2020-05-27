@@ -1,4 +1,5 @@
 var button = document.querySelector(".btn");
+var buttonHome = document.querySelector("#btn2");
 var nameProf = document.querySelector(".name");
 var image = document.querySelector("#image");
 var username = document.querySelector(".username");
@@ -11,6 +12,7 @@ var url = "https://randomuser.me/api/";
 var rowAnimate = document.getElementsByClassName("row")[0];
 var x = document.getElementById("myAudio"); 
 var enterButton = document.querySelector(".tik");
+var hof = document.querySelector(".hof");
 
 function playAudio() { 
   x.play(); 
@@ -117,3 +119,19 @@ $('.expand').click(function() {
       }
     );
   });
+
+
+  hof.addEventListener("click", function(){
+    $(".introductory").fadeTo(1500, 0, function(){
+        $(".introductory").css("display", "none");
+        $(".container").css("display", "flex");
+        $(".container").fadeTo(1000, 1);
+    }); 
+  })
+
+  buttonHome.addEventListener("click", function(){
+    $(".container").fadeTo(1500, 0, function(){
+        $(".container").css("display", "none");
+        $(".introductory").fadeTo(1000, 1);
+    });
+  })
