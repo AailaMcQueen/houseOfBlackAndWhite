@@ -36,6 +36,7 @@
     width: 100%;
     flex-basis: 100%;
     position: fixed;
+    z-index: 9999;
   }
 
   .cards{
@@ -43,12 +44,14 @@
     margin-top: 240px;
     margin-left: 6%;
     display: flex;
+    margin-bottom: 80px;
     justify-content: space-around;
   }
 
   .cardIn{
     margin: 10px;
     display: flex;
+    width: 27%;
     flex-direction: column;
     text-align: center;
     background-color: darkgray;
@@ -274,4 +277,15 @@
 
   .cardIn div h4 {
     padding: 10px;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color:black;
+    color: white;
+    text-align: center;
   }
