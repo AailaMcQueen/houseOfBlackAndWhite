@@ -96,5 +96,6 @@ button.addEventListener("click", function(){
 })
 
 enterButton.addEventListener("click", function(){
-    
+    $(".openingCover").fadeOut(1500);
+    $(".introductory").fadeIn(3000);
 })
