@@ -7,6 +7,10 @@
     font-family: 'Cinzel', serif;
   }
   
+body{
+  background-color: black;
+}
+
   .go{
     width: 60px;
     height: inherit;
@@ -46,7 +50,27 @@
     background-position: center;
   }
 
+  .music{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+  }
 
+  .musicOff{
+    opacity: 1;
+  }
+
+  .music:hover{
+    cursor: pointer;
+    font-size: 32px;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+  }
 
   .introductory{
     display: none;
@@ -70,7 +94,7 @@
 
   .cards{
     width: 90%;
-    margin-top: 240px;
+    margin-top: 280px;
     margin-left: 6%;
     display: flex;
     margin-bottom: 80px;
@@ -332,4 +356,8 @@
     background-color:black;
     color: white;
     text-align: center;
+  }
+
+  footer h5{
+    padding: 10px 0;
   }
