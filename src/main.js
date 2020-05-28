@@ -15,17 +15,33 @@ var enterButton = document.querySelector(".tik");
 var hof = document.querySelector(".hof");
 var musicOn = document.querySelector(".musicOn");
 var musicOff = document.querySelector(".musicOff");
+var houseHistory = document.querySelector(".details");
 
 var houseInfo = "The House of Black and White is a temple in Braavos dedicated to the Many-Faced God. It serves as the headquarters of the guild of religious assassins known as the <strong>Faceless Men</strong>."; 
 var houseInfo2 = "<br>It sits alone on a small island in the lagoon of Braavos. Although it can be reached by boat or bridge from other locations in the city, the island is usually deserted.";
+
+houseHistory.innerHTML = houseInfo+houseInfo2;
+houseHistory.style.padding = "10px";
 
 var rules = [
     "<strong>They kill in inconspicuous and clever ways.</strong> The Faceless Men don't like to call attention to themselves or their murders. They offer what is known as a <strong>precise</strong> killing, with no other casualties, that might look like an accident more often than not. They are believed to most commonly use a poison called <strong>The Strangler</strong>.",
     "<strong>They serve the Many-Faced God and do not decide who dies.</strong> The Faceless Men see themselves as the servants of their god. They are merely acting in accordance with the will of this higher power.",
     "<strong>They have left their identities behind.</strong> This is one of the core principles of a Faceless Man. You must give over everything to the Many-Faced God.",
     "<strong>They are not supposed to know their victims.</strong> The Faceless Men must let go of their personal vendettas, and they're not supposed to have previously met their victims. This seems to align with the principles of any assassin. It is a contractual kill, it is not personal. The murderer must never have an emotional stake in it."
-]
+];
 
+function ruleEntry(){
+    var rule1 = document.querySelector(".rule1");
+    var rule2 = document.querySelector(".rule2");
+    var rule3 = document.querySelector(".rule3");
+    var rule4 = document.querySelector(".rule4");
+    rule1.innerHTML = rules[0];
+    rule2.innerHTML = rules[1];
+    rule3.innerHTML = rules[2];
+    rule4.innerHTML = rules[3];
+}
+
+ruleEntry();
 
 function playAudio() { 
   x.play(); 

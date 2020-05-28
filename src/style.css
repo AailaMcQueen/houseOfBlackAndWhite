@@ -42,12 +42,36 @@ body{
   .openingCover{
     min-height: 100%;
     width: 100%;
+    display: none;
     position: absolute;
     background-image: url('./image/openingCover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: inherit;
     background-position: center;
+  }
+
+
+  .information{
+    min-height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    background-image: url('./image/backCover2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: inherit;
+    background-position: center;
+  }
+
+  .information div{
+    width: 60%;
+    padding-left: 20%;
+    text-align: center;
   }
 
   .music{
@@ -268,7 +292,34 @@ body{
     border-radius: 50%;
   }
 
+  .btn a{
+    color: white;
+    text-decoration: none;
+  }
+;
+
+li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+  .information .btn{
+    width: 40%;
+  }
+
+  .information .houseHistory{
+    display: none;
+  }
+  .information .rulesOfFaceless{
+    display: none;
+  }
+
   @media screen and (max-width:600px){
+    .information div{
+      width: 80%;
+      padding-left: 10%;
+      text-align: center;
+    }
       .card{
           width: 80%;
       }
@@ -366,4 +417,9 @@ body{
 
   footer h5{
     padding: 10px 0;
+  }
+
+  li{
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
