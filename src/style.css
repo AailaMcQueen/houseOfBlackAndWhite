@@ -152,6 +152,7 @@ body{
   }
   
   .container{
+    padding-top: 120px;
     height: 100vh;
     display: none;
     flex-direction: column;
@@ -172,6 +173,11 @@ body{
     color: white;
   }
   
+  .empt{
+    flex-grow: 0.2;
+    padding-bottom: 120px;
+  }
+
   .row{
     background-color: white;
     display: flex;
