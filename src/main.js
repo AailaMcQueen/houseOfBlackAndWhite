@@ -1,5 +1,6 @@
 var button = document.querySelector(".btn");
 var buttonHome = document.querySelector("#btn2");
+var buttonHome2 = document.querySelector("#btn3");
 var nameProf = document.querySelector(".name");
 var image = document.querySelector("#image");
 var username = document.querySelector(".username");
@@ -16,12 +17,15 @@ var hof = document.querySelector(".hof");
 var musicOn = document.querySelector(".musicOn");
 var musicOff = document.querySelector(".musicOff");
 var houseHistory = document.querySelector(".details");
+var faceLessCard = document.querySelector(".faceLessCard");
+var houseHistoryCard = document.querySelector(".houseHistoryCard");
 
 var houseInfo = "The House of Black and White is a temple in Braavos dedicated to the Many-Faced God. It serves as the headquarters of the guild of religious assassins known as the <strong>Faceless Men</strong>."; 
 var houseInfo2 = "<br>It sits alone on a small island in the lagoon of Braavos. Although it can be reached by boat or bridge from other locations in the city, the island is usually deserted.";
 
 houseHistory.innerHTML = houseInfo+houseInfo2;
 houseHistory.style.padding = "10px";
+houseHistory.style.fontSize = "1.2em";
 
 var rules = [
     "<strong>They kill in inconspicuous and clever ways.</strong> The Faceless Men don't like to call attention to themselves or their murders. They offer what is known as a <strong>precise</strong> killing, with no other casualties, that might look like an accident more often than not. They are believed to most commonly use a poison called <strong>The Strangler</strong>.",
@@ -31,10 +35,12 @@ var rules = [
 ];
 
 function ruleEntry(){
+    var rule = document.querySelector(".list");
     var rule1 = document.querySelector(".rule1");
     var rule2 = document.querySelector(".rule2");
     var rule3 = document.querySelector(".rule3");
     var rule4 = document.querySelector(".rule4");
+    rule.style.fontSize = "1.2em";
     rule1.innerHTML = rules[0];
     rule2.innerHTML = rules[1];
     rule3.innerHTML = rules[2];
@@ -56,6 +62,8 @@ function pauseAudio() {
 //   }
 document.addEventListener('click', musicPlay);
 function musicPlay() {
+    musicOn.style.opacity = 1;
+    musicOff.style.opacity = 0.5;
     playAudio();
     document.removeEventListener('click', musicPlay);
 }
@@ -167,6 +175,13 @@ $(".container").fadeTo(1500, 0, function(){
 });
 })
 
+buttonHome2.addEventListener("click", function(){
+    $(".information").fadeTo(1500, 0, function(){
+        $(".information").css("display", "none");
+        $(".introductory").fadeTo(1000, 1);
+    });
+})
+
 musicOn.addEventListener("click", function(){
     x.muted = false;
     musicOn.style.opacity = 1;
@@ -178,3 +193,24 @@ musicOff.addEventListener("click", function(){
     musicOn.style.opacity = 0.5;
     musicOff.style.opacity = 1;
 })
+
+faceLessCard.addEventListener("click", function(){
+    $(".introductory").fadeTo(1500, 0, function(){
+        $(".introductory").css("display", "none");
+        $(".information").css("display", "flex");
+        $(".information").fadeTo(1000, 1);
+        $(".houseHistory").css("display", "none");
+        $(".rulesOfFaceless").slideDown(1000);
+    }); 
+})
+
+houseHistoryCard.addEventListener("click", function(){
+    $(".introductory").fadeTo(1500, 0, function(){
+        $(".introductory").css("display", "none");
+        $(".information").css("display", "flex");
+        $(".information").fadeTo(1000, 1);
+        $(".rulesOfFaceless").css("display", "none"); 
+        $(".houseHistory").slideDown(1000);
+    }); 
+})
+

@@ -42,7 +42,6 @@ body{
   .openingCover{
     min-height: 100%;
     width: 100%;
-    display: none;
     position: absolute;
     background-image: url('./image/openingCover.jpg');
     background-repeat: no-repeat;
@@ -56,7 +55,7 @@ body{
     min-height: 100%;
     width: 100%;
     padding-top: 30px;
-    display: flex;
+    display: none;
     color: white;
     flex-direction: column;
     justify-content: space-around;
@@ -243,6 +242,10 @@ body{
     box-shadow: none;
   }
 
+  #btn3{
+    background-color: black;
+    box-shadow: none;
+  }
 
   .homeButton{
     margin-top: 30px;
@@ -253,6 +256,13 @@ body{
     font-size: larger;
     transition: ease-in-out;
     transition-duration: 0.5s;
+}
+
+#btn3:hover{
+  cursor: pointer;
+  font-size: larger;
+  transition: ease-in-out;
+  transition-duration: 0.5s;
 }
 
   hr{
@@ -307,12 +317,18 @@ li{
     width: 40%;
   }
 
+  .information .homeButton .btn{
+    width: 80%;
+  }
+
   .information .houseHistory{
     display: none;
   }
   .information .rulesOfFaceless{
     display: none;
   }
+
+  
 
   @media screen and (max-width:600px){
     .information div{
