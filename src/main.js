@@ -83,7 +83,14 @@ fetch(url)
     var data = response.results[0];
     //rowAnimate.style.webkitAnimationPlayState = "running";
     rowAnimate.classList.add("myAnimate");
-    nameProf.innerHTML = data.name.title + " " + data.name.first + " " + data.name.last;
+    var title = "";
+    if(data.name.title=="Mr"){
+        title = "Lord";
+    }
+    else{
+        title = "Lady";
+    }
+    nameProf.innerHTML = title + " " + data.name.first + " " + data.name.last;
     city.innerHTML = data.location.city + ", " + data.location.state + ", " + data.location.country;
     username.innerHTML = data.login.username;
     email.innerHTML = data.email;
@@ -115,8 +122,15 @@ button.addEventListener("click", function(){
         var data = response.results[0];
         //rowAnimate.style.webkitAnimationPlayState = "running";
         rowAnimate.classList.add("myAnimate");
+        var title = "";
+        if(data.name.title=="Mr"){
+            title = "Lord";
+        }
+        else{
+            title = "Lady";
+        }
         setTimeout(function(){
-            nameProf.innerHTML = data.name.title + " " + data.name.first + " " + data.name.last;
+            nameProf.innerHTML = title + " " + data.name.first + " " + data.name.last;
             city.innerHTML = data.location.city + ", " + data.location.state + ", " + data.location.country;
             username.innerHTML = data.login.username;
             email.innerHTML = data.email;
