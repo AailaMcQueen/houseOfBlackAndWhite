@@ -27,6 +27,9 @@ houseHistory.innerHTML = houseInfo+houseInfo2;
 houseHistory.style.padding = "10px";
 houseHistory.style.fontSize = "1.2em";
 
+$(".cards").css("display", "none");
+$(".prof").css("display", "none");
+
 var rules = [
     "<strong>They kill in inconspicuous and clever ways.</strong> The Faceless Men don't like to call attention to themselves or their murders. They offer what is known as a <strong>precise</strong> killing, with no other casualties, that might look like an accident more often than not. They are believed to most commonly use a poison called <strong>The Strangler</strong>.",
     "<strong>They serve the Many-Faced God and do not decide who dies.</strong> The Faceless Men see themselves as the servants of their god. They are merely acting in accordance with the will of this higher power.",
@@ -140,6 +143,8 @@ enterButton.addEventListener("click", function(){
         musicOff.style.opacity = 0.5;
         $(".openingCover").css("display", "none");
         $(".introductory").fadeTo(1000, 1);
+        $(".cards").slideDown(1000);
+        $(".cards").css("display", "flex");
     });  
 })
 
@@ -162,9 +167,17 @@ $('.expand').click(function() {
 
 hof.addEventListener("click", function(){
 $(".introductory").fadeTo(1500, 0, function(){
+    $(".cards").slideUp(1000);
     $(".introductory").css("display", "none");
+    $(".container").css("display", "-webkit-box");
+    $(".container").css("display", "-ms-flexbox");
     $(".container").css("display", "flex");
     $(".container").fadeTo(1000, 1);
+    $(".prof").slideDown(1000);
+    $(".prof").css("display", "-webkit-box");
+    $(".prof").css("display", "-ms-flexbox");
+    $(".prof").css("display", "flex");
+    $(window).scrollTop(0);
 }); 
 })
 
@@ -172,13 +185,26 @@ buttonHome.addEventListener("click", function(){
 $(".container").fadeTo(1500, 0, function(){
     $(".container").css("display", "none");
     $(".introductory").fadeTo(1000, 1);
+    $(".cards").slideDown(1000);
+    $(".cards").css("display", "-webkit-box");
+    $(".cards").css("display", "-ms-flexbox");
+    $(".cards").css("display", "flex");
+    $(".prof").css("display", "none");
+    $(window).scrollTop(0);
 });
 })
 
 buttonHome2.addEventListener("click", function(){
     $(".information").fadeTo(1500, 0, function(){
         $(".information").css("display", "none");
+        $(".houseHistory").css("display", "none");
+        $(".rulesOfFaceless").css("display", "none"); 
         $(".introductory").fadeTo(1000, 1);
+        $(".cards").slideDown(1000);
+        $(".cards").css("display", "-webkit-box");
+        $(".cards").css("display", "-ms-flexbox");
+        $(".cards").css("display", "flex");
+        $(window).scrollTop(0);
     });
 })
 
@@ -196,21 +222,29 @@ musicOff.addEventListener("click", function(){
 
 faceLessCard.addEventListener("click", function(){
     $(".introductory").fadeTo(1500, 0, function(){
+        $(".cards").slideUp(1000);
         $(".introductory").css("display", "none");
+        $(".information").css("display", "-webkit-box");
+        $(".information").css("display", "-ms-flexbox");
         $(".information").css("display", "flex");
         $(".information").fadeTo(1000, 1);
         $(".houseHistory").css("display", "none");
         $(".rulesOfFaceless").slideDown(1000);
+        $(window).scrollTop(0);
     }); 
 })
 
 houseHistoryCard.addEventListener("click", function(){
     $(".introductory").fadeTo(1500, 0, function(){
+        $(".cards").slideUp(1000);
         $(".introductory").css("display", "none");
+        $(".information").css("display", "-webkit-box");
+        $(".information").css("display", "-ms-flexbox");
         $(".information").css("display", "flex");
         $(".information").fadeTo(1000, 1);
         $(".rulesOfFaceless").css("display", "none"); 
         $(".houseHistory").slideDown(1000);
+        $(window).scrollTop(0);
     }); 
 })
 
