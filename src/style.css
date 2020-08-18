@@ -140,7 +140,7 @@ body{
 
   .cards{
     width: 90%;
-    margin-top: 280px;
+    margin-top: 340px;
     margin-left: 6%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -412,9 +412,23 @@ li{
     display: none;
   }
 
-  
+  .cardIn div img {
+    height: 20vh;
+    padding: 20px;
+    width: 20vh;
+    border-radius: 50%;
+  }
 
-  @media screen and (max-width:600px){
+  @media screen and (max-width:1200px){
+    .cardIn div img {
+      height: 12vh;
+      padding: 20px;
+      width: 12vh;
+      border-radius: 50%;
+    }
+  }
+
+  @media screen and (max-width:700px){
     .information div{
       width: 80%;
       padding-left: 10%;
@@ -487,6 +501,13 @@ li{
       -ms-flex-pack: distribute;
           justify-content: space-around;
     }
+
+    .cardIn div img {
+      height: 15vh;
+      padding: 20px;
+      width: 15vh;
+      border-radius: 50%;
+    }
   }
 
   @media screen and (max-width:370px){
@@ -525,13 +546,6 @@ li{
   .row.myAnimate{
     -webkit-animation: fadeOut 1s linear 1;
             animation: fadeOut 1s linear 1;
-  }
-
-  .cardIn div img {
-    height: 20vh;
-    padding: 20px;
-    width: 20vh;
-    border-radius: 50%;
   }
 
   .cardIn div h4 {
